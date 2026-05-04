@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -22,22 +22,22 @@ export default function Product() {
     fetch(`/api/products/${slug}`).then(r=>r.json()).then(data => {
       if(data.id) {
         setProduct(data)
-        document.title = `${data.name} — Neila Beauty Store`
+        document.title = `${data.name} — Beauty Store`
         fetch(`/api/products?category=${data.categories?.slug||''}`).then(r=>r.json()).then(all => {
           setRelated((Array.isArray(all)?all:[]).filter(p=>p.id!==data.id).slice(0,4))
         })
       }
     })
-    const cart = JSON.parse(localStorage.getItem('neila_cart')||'[]')
+    const cart = JSON.parse(localStorage.getItem('beauty_cart')||'[]')
     setCartCount(cart.reduce((s,i)=>s+i.qty,0))
   }, [slug])
 
   function addToCart(p, q=1) {
-    const cart = JSON.parse(localStorage.getItem('neila_cart')||'[]')
+    const cart = JSON.parse(localStorage.getItem('beauty_cart')||'[]')
     const ex = cart.find(i=>i.id===p.id)
     if(ex) ex.qty = Math.min(ex.qty+q,10)
     else cart.push({id:p.id,name:p.name,price:p.price,icon:catEmoji[p.categories?.slug]||'✨',qty:q})
-    localStorage.setItem('neila_cart', JSON.stringify(cart))
+    localStorage.setItem('beauty_cart', JSON.stringify(cart))
     setCartCount(cart.reduce((s,i)=>s+i.qty,0))
   }
 
@@ -59,7 +59,7 @@ export default function Product() {
 
   return (
     <>
-      <Head><title>{product.name} — Neila Beauty Store</title></Head>
+      <Head><title>{product.name} — Beauty Store</title></Head>
 
       {/* MARQUEE */}
       <div style={{background:'var(--rose)',padding:'10px 0',overflow:'hidden'}}>
@@ -72,7 +72,7 @@ export default function Product() {
 
       {/* NAV */}
       <nav style={{position:'sticky',top:0,zIndex:100,background:'rgba(250,248,245,0.95)',backdropFilter:'blur(16px)',borderBottom:'1px solid var(--border)',padding:'0 64px',display:'flex',alignItems:'center',justifyContent:'space-between',height:'74px'}}>
-        <Link href="/" style={{fontFamily:'Cormorant Garamond, serif',fontSize:'27px',fontWeight:600,color:'var(--rose)'}}>Neila <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em></Link>
+        <Link href="/" style={{fontFamily:'Cormorant Garamond, serif',fontSize:'27px',fontWeight:600,color:'var(--rose)'}}>Beauty <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em></Link>
         <ul style={{display:'flex',gap:'38px',listStyle:'none'}}>
           {[['Home','/'],['Shop','/shop'],['Combos','/#combos'],['Contact','/#contact']].map(([l,h])=>(<li key={l}><Link href={h} className="nav-link">{l}</Link></li>))}
         </ul>
@@ -198,7 +198,7 @@ export default function Product() {
 
       <footer style={{background:'#0F0408',padding:'24px 64px'}}>
         <div style={{display:'flex',justifyContent:'space-between',fontSize:'12px',color:'rgba(255,255,255,0.25)'}}>
-          <span>© 2026 Neila Beauty Store. All rights reserved.</span>
+          <span>© 2026 Beauty Store. All rights reserved.</span>
           <span style={{color:'var(--gold)'}}>You are Beautiful ✦</span>
         </div>
       </footer>

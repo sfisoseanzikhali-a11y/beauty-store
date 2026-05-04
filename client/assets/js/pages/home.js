@@ -1,5 +1,5 @@
-document.documentElement.lang = 'en';
-document.title = 'Neila Beauty Store \u2014 You Are Beautiful';
+﻿document.documentElement.lang = 'en';
+document.title = 'Beauty Store \u2014 You Are Beautiful';
 
 const _preconnect = document.createElement('link');
 _preconnect.rel = 'preconnect';
@@ -233,7 +233,7 @@ document.body.innerHTML = `
 </div>
 
 <nav id="nav">
-  <a href="#" class="logo">Neila <em>Beauty</em></a>
+  <a href="#" class="logo">Beauty <em>Beauty</em></a>
   <ul class="nav-links">
     <li><a href="#cats">Shop</a></li>
     <li><a href="#arrivals">New Arrivals</a></li>
@@ -276,7 +276,7 @@ document.body.innerHTML = `
       <div class="hero-inner">
         <div class="hi-icon">\u2728</div>
         <div class="hi-title">Glow from<br>Within</div>
-        <div class="hi-sub">Neila Beauty Store</div>
+        <div class="hi-sub">Beauty Store</div>
       </div>
     </div>
   </div>
@@ -303,18 +303,18 @@ document.body.innerHTML = `
     <p class="sec-desc">Everything your beauty routine needs, in one carefully curated place.</p>
   </div>
   <div class="cat-grid">
-    <a href="https://neilabeautystore.com/product-category/face-products/" class="cat-card reveal d1" target="_blank"><div class="cat-icon">\ud83c\udf38</div><div class="cat-nm">Face Products</div></a>
-    <a href="https://neilabeautystore.com/product-category/body-care/" class="cat-card reveal d2" target="_blank"><div class="cat-icon">\ud83d\udc86</div><div class="cat-nm">Body Care</div></a>
-    <a href="https://neilabeautystore.com/product-category/hair-products/" class="cat-card reveal d3" target="_blank"><div class="cat-icon">\ud83d\udc87</div><div class="cat-nm">Hair Products</div></a>
-    <a href="https://neilabeautystore.com/product-category/facial-body-product/" class="cat-card reveal d1" target="_blank"><div class="cat-icon">\u2728</div><div class="cat-nm">Face &amp; Body</div></a>
-    <a href="https://neilabeautystore.com/product-category/supplements/" class="cat-card reveal d2" target="_blank"><div class="cat-icon">\ud83d\udc8a</div><div class="cat-nm">Supplements</div></a>
-    <a href="https://neilabeautystore.com/product-category/men-products/" class="cat-card reveal d3" target="_blank"><div class="cat-icon">\ud83e\uddf4</div><div class="cat-nm">Men Products</div></a>
-    <a href="https://neilabeautystore.com/product-category/hair-extensions/" class="cat-card reveal d1" target="_blank"><div class="cat-icon">\ud83d\udc69</div><div class="cat-nm">Hair Extensions</div></a>
-    <a href="https://neilabeautystore.com/product-category/powders/" class="cat-card reveal d2" target="_blank"><div class="cat-icon">\ud83d\udc84</div><div class="cat-nm">Powders</div></a>
-    <a href="https://neilabeautystore.com/product-category/knuckle-products/" class="cat-card reveal d3" target="_blank"><div class="cat-icon">\ud83e\udef2</div><div class="cat-nm">Knuckle Products</div></a>
-    <a href="https://neilabeautystore.com/product-category/lips-products/" class="cat-card reveal d1" target="_blank"><div class="cat-icon">\ud83d\udc8b</div><div class="cat-nm">Lips Products</div></a>
-    <a href="https://neilabeautystore.com/product-category/body-care/combo-sets/" class="cat-card reveal d2" target="_blank"><div class="cat-icon">\ud83c\udf81</div><div class="cat-nm">Combo Sets</div></a>
-    <a href="https://neilabeautystore.com/shop/" class="cat-card reveal d3" target="_blank"><div class="cat-icon">\ud83d\udecd\ufe0f</div><div class="cat-nm">All Products</div></a>
+    <a href="#" class="cat-card reveal d1" target="_blank"><div class="cat-icon">\ud83c\udf38</div><div class="cat-nm">Face Products</div></a>
+    <a href="#" class="cat-card reveal d2" target="_blank"><div class="cat-icon">\ud83d\udc86</div><div class="cat-nm">Body Care</div></a>
+    <a href="#" class="cat-card reveal d3" target="_blank"><div class="cat-icon">\ud83d\udc87</div><div class="cat-nm">Hair Products</div></a>
+    <a href="#" class="cat-card reveal d1" target="_blank"><div class="cat-icon">\u2728</div><div class="cat-nm">Face &amp; Body</div></a>
+    <a href="#" class="cat-card reveal d2" target="_blank"><div class="cat-icon">\ud83d\udc8a</div><div class="cat-nm">Supplements</div></a>
+    <a href="#" class="cat-card reveal d3" target="_blank"><div class="cat-icon">\ud83e\uddf4</div><div class="cat-nm">Men Products</div></a>
+    <a href="#" class="cat-card reveal d1" target="_blank"><div class="cat-icon">\ud83d\udc69</div><div class="cat-nm">Hair Extensions</div></a>
+    <a href="#" class="cat-card reveal d2" target="_blank"><div class="cat-icon">\ud83d\udc84</div><div class="cat-nm">Powders</div></a>
+    <a href="#" class="cat-card reveal d3" target="_blank"><div class="cat-icon">\ud83e\udef2</div><div class="cat-nm">Knuckle Products</div></a>
+    <a href="#" class="cat-card reveal d1" target="_blank"><div class="cat-icon">\ud83d\udc8b</div><div class="cat-nm">Lips Products</div></a>
+    <a href="#" class="cat-card reveal d2" target="_blank"><div class="cat-icon">\ud83c\udf81</div><div class="cat-nm">Combo Sets</div></a>
+    <a href="#" class="cat-card reveal d3" target="_blank"><div class="cat-icon">\ud83d\udecd\ufe0f</div><div class="cat-nm">All Products</div></a>
   </div>
 </section>
 
@@ -368,7 +368,7 @@ document.body.innerHTML = `
     </div>
     <div class="test-card reveal d3">
       <div class="stars">\u2605\u2605\u2605\u2605\u2605</div>
-      <p class="test-text">"So glad I found Neila Beauty! Their WhatsApp support is incredible \u2014 they helped me build the perfect routine for my sensitive skin type."</p>
+      <p class="test-text">"So glad I found Beauty Store! Their WhatsApp support is incredible \u2014 they helped me build the perfect routine for my sensitive skin type."</p>
       <div class="reviewer"><div class="rev-av">LK</div><div><div class="rev-name">Lerato K.</div><div class="rev-loc">Soweto, GP</div></div></div>
     </div>
   </div>
@@ -386,7 +386,7 @@ document.body.innerHTML = `
 <section class="nl-sec">
   <div class="reveal">
     <span class="sec-label" style="color:var(--gold)">Stay in the Loop</span>
-    <h2 class="sec-title">Join the <em>Neila Family</em></h2>
+    <h2 class="sec-title">Join the <em>Beauty Family</em></h2>
     <p class="sec-desc">Be first to know about new arrivals, exclusive deals and expert beauty tips delivered to your inbox.</p>
     <div class="nl-form">
       <input type="email" class="nl-input" placeholder="Enter your email address">
@@ -398,25 +398,25 @@ document.body.innerHTML = `
 <footer>
   <div class="foot-grid">
     <div>
-      <a href="#" class="logo foot-logo">Neila <em>Beauty</em></a>
+      <a href="#" class="logo foot-logo">Beauty <em>Beauty</em></a>
       <p class="foot-desc">Your trusted destination for premium skincare, body care and beauty products across South Africa. 100% authentic, always.</p>
     </div>
     <div class="foot-col">
       <h4>Shop</h4>
       <ul>
-        <li><a href="https://neilabeautystore.com/product-category/face-products/" target="_blank">Face Products</a></li>
-        <li><a href="https://neilabeautystore.com/product-category/body-care/" target="_blank">Body Care</a></li>
-        <li><a href="https://neilabeautystore.com/product-category/hair-products/" target="_blank">Hair Products</a></li>
-        <li><a href="https://neilabeautystore.com/product-category/body-care/combo-sets/" target="_blank">Combo Sets</a></li>
-        <li><a href="https://neilabeautystore.com/product-category/supplements/" target="_blank">Supplements</a></li>
+        <li><a href="#" target="_blank">Face Products</a></li>
+        <li><a href="#" target="_blank">Body Care</a></li>
+        <li><a href="#" target="_blank">Hair Products</a></li>
+        <li><a href="#" target="_blank">Combo Sets</a></li>
+        <li><a href="#" target="_blank">Supplements</a></li>
       </ul>
     </div>
     <div class="foot-col">
       <h4>Help</h4>
       <ul>
-        <li><a href="https://neilabeautystore.com/terms-and-conditions/" target="_blank">Terms &amp; Conditions</a></li>
+        <li><a href="#" target="_blank">Terms &amp; Conditions</a></li>
         <li><a href="https://wa.me/27722937265" target="_blank">WhatsApp Support</a></li>
-        <li><a href="https://neilabeautystore.com/my-account/" target="_blank">My Account</a></li>
+        <li><a href="#" target="_blank">My Account</a></li>
         <li><a href="#">Shipping Policy</a></li>
         <li><a href="#">Returns Policy</a></li>
       </ul>
@@ -432,7 +432,7 @@ document.body.innerHTML = `
     </div>
   </div>
   <div class="foot-bottom">
-    <span>\u00a9 2026 Neila Beauty Store. All rights reserved.</span>
+    <span>\u00a9 2026 Beauty Store. All rights reserved.</span>
     <span class="foot-gold">You are Beautiful \u2756</span>
   </div>
 </footer>

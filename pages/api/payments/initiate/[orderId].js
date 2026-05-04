@@ -11,7 +11,7 @@ function buildPayfastFields({ orderId, amount, customerName, customerEmail, retu
     email_address: customerEmail,
     m_payment_id: String(orderId),
     amount: Number(amount).toFixed(2),
-    item_name: `Neila Beauty Order #${orderId}`,
+    item_name: `Beauty Store Order #${orderId}`,
   }
   Object.keys(fields).forEach(k => { if (!fields[k]) delete fields[k] })
   const sigStr = Object.entries(fields).map(([k, v]) => `${k}=${encodeURIComponent(String(v)).replace(/%20/g, '+')}`).join('&')

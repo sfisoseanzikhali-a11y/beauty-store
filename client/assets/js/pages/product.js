@@ -1,5 +1,5 @@
-document.documentElement.lang = 'en';
-document.title = 'Product \u2014 Neila Beauty Store';
+﻿document.documentElement.lang = 'en';
+document.title = 'Product \u2014 Beauty Store';
 
 const _preconnect = document.createElement('link');
 _preconnect.rel = 'preconnect';
@@ -131,7 +131,7 @@ document.body.innerHTML = `
 <div class="marquee-strip"><div class="marquee-track"><span>Free Delivery on Orders Over R500</span><span>100% Authentic Products</span><span>WhatsApp Support Available</span><span>New Season Arrivals Just Dropped</span><span>Free Delivery on Orders Over R500</span><span>100% Authentic Products</span><span>WhatsApp Support Available</span><span>New Season Arrivals Just Dropped</span></div></div>
 
 <nav id="nav">
-  <a href="/" class="logo">Neila <em>Beauty</em></a>
+  <a href="/" class="logo">Beauty <em>Beauty</em></a>
   <ul class="nav-links">
     <li><a href="/">Home</a></li>
     <li><a href="/shop.html">Shop</a></li>
@@ -164,12 +164,12 @@ document.body.innerHTML = `
 
 <footer>
   <div class="foot-grid">
-    <div><a href="/" class="foot-logo">Neila <em>Beauty</em></a><p class="foot-desc">Premium skincare and beauty products across South Africa. 100% authentic, always.</p></div>
+    <div><a href="/" class="foot-logo">Beauty <em>Beauty</em></a><p class="foot-desc">Premium skincare and beauty products across South Africa. 100% authentic, always.</p></div>
     <div class="foot-col"><h4>Shop</h4><ul><li><a href="/shop.html">All Products</a></li><li><a href="/shop.html?category=face-products">Face Products</a></li><li><a href="/shop.html?category=body-care">Body Care</a></li><li><a href="/shop.html?category=combo-sets">Combo Sets</a></li></ul></div>
     <div class="foot-col"><h4>Help</h4><ul><li><a href="https://wa.me/27722937265" target="_blank">WhatsApp Support</a></li><li><a href="#">Shipping Policy</a></li><li><a href="#">Returns Policy</a></li></ul></div>
     <div class="foot-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li><li><a href="https://wa.me/27722937265" target="_blank">WhatsApp</a></li></ul></div>
   </div>
-  <div class="foot-bottom"><span>\u00a9 2026 Neila Beauty Store. All rights reserved.</span><span class="foot-gold">You are Beautiful \u2756</span></div>
+  <div class="foot-bottom"><span>\u00a9 2026 Beauty Store. All rights reserved.</span><span class="foot-gold">You are Beautiful \u2756</span></div>
 </footer>
 
 <div class="toast" id="toast"><span class="toast-icon">\ud83d\uded2</span><span id="toast-msg"></span></div>
@@ -199,7 +199,7 @@ async function loadProduct(slug) {
     return;
   }
   currentProduct = await res.json();
-  document.title = currentProduct.name + ' \u2014 Neila Beauty Store';
+  document.title = currentProduct.name + ' \u2014 Beauty Store';
   document.getElementById('breadcrumb-name').textContent = currentProduct.name;
   renderProduct(currentProduct);
   loadRelated(currentProduct);

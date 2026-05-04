@@ -1,5 +1,5 @@
-document.documentElement.lang = 'en';
-document.title = 'Cart \u2014 Neila Beauty Store';
+﻿document.documentElement.lang = 'en';
+document.title = 'Cart \u2014 Beauty Store';
 
 const _preconnect = document.createElement('link');
 _preconnect.rel = 'preconnect';
@@ -93,7 +93,7 @@ document.body.innerHTML = `
 <div class="marquee-strip"><div class="marquee-track"><span>Free Delivery on Orders Over R500</span><span>100% Authentic Products</span><span>WhatsApp Support Available</span><span>New Season Arrivals Just Dropped</span><span>Free Delivery on Orders Over R500</span><span>100% Authentic Products</span><span>WhatsApp Support Available</span><span>New Season Arrivals Just Dropped</span></div></div>
 
 <nav>
-  <a href="/" class="logo">Neila <em>Beauty</em></a>
+  <a href="/" class="logo">Beauty <em>Beauty</em></a>
   <ul class="nav-links">
     <li><a href="/">Home</a></li>
     <li><a href="/shop.html">Shop</a></li>
@@ -131,7 +131,7 @@ document.body.innerHTML = `
   </aside>
 </div>
 
-<footer><div class="foot-bottom"><span>\u00a9 2026 Neila Beauty Store. All rights reserved.</span><span class="foot-gold">You are Beautiful \u2756</span></div></footer>
+<footer><div class="foot-bottom"><span>\u00a9 2026 Beauty Store. All rights reserved.</span><span class="foot-gold">You are Beautiful \u2756</span></div></footer>
 `;
 
 function renderCart() {

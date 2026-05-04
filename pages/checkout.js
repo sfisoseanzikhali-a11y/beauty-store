@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -12,7 +12,7 @@ export default function Checkout() {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    const c = JSON.parse(localStorage.getItem('neila_cart')||'[]')
+    const c = JSON.parse(localStorage.getItem('beauty_cart')||'[]')
     if(!c.length) router.push('/cart')
     setCart(c)
   }, [])
@@ -28,9 +28,9 @@ export default function Checkout() {
 
     if(payment==='whatsapp') {
       const items = cart.map(i=>`${i.name} x${i.qty} = R${(i.price*i.qty).toFixed(2)}`).join('%0A')
-      const msg = `Hello Neila Beauty! I'd like to place an order:%0A%0AName: ${form.name}%0AEmail: ${form.email}%0APhone: ${form.phone}%0AAddress: ${form.address}%0A%0AItems:%0A${items}%0A%0ATotal: R${total.toFixed(2)}`
+      const msg = `Hello Beauty Store! I'd like to place an order:%0A%0AName: ${form.name}%0AEmail: ${form.email}%0APhone: ${form.phone}%0AAddress: ${form.address}%0A%0AItems:%0A${items}%0A%0ATotal: R${total.toFixed(2)}`
       window.open(`https://wa.me/27722937265?text=${msg}`, '_blank')
-      localStorage.removeItem('neila_cart')
+      localStorage.removeItem('beauty_cart')
       router.push('/order-success?method=whatsapp')
       return
     }
@@ -52,7 +52,7 @@ export default function Checkout() {
       const pf = await pfRes.json()
       if(!pfRes.ok) throw new Error(pf.error||'Payment initiation failed')
 
-      localStorage.removeItem('neila_cart')
+      localStorage.removeItem('beauty_cart')
       const form2 = document.createElement('form')
       form2.method='POST'; form2.action=pf.url
       Object.entries(pf.fields).forEach(([k,v])=>{
@@ -69,7 +69,7 @@ export default function Checkout() {
 
   return (
     <>
-      <Head><title>Checkout — Neila Beauty Store</title></Head>
+      <Head><title>Checkout — Beauty Store</title></Head>
 
       <div style={{background:'var(--rose)',padding:'10px 0',overflow:'hidden'}}>
         <div className="marquee-track">
@@ -80,7 +80,7 @@ export default function Checkout() {
       </div>
 
       <nav style={{background:'rgba(250,248,245,0.95)',backdropFilter:'blur(16px)',borderBottom:'1px solid var(--border)',padding:'0 64px',display:'flex',alignItems:'center',justifyContent:'space-between',height:'74px'}}>
-        <Link href="/" style={{fontFamily:'Cormorant Garamond, serif',fontSize:'27px',fontWeight:600,color:'var(--rose)'}}>Neila <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em></Link>
+        <Link href="/" style={{fontFamily:'Cormorant Garamond, serif',fontSize:'27px',fontWeight:600,color:'var(--rose)'}}>Beauty <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em></Link>
         <div style={{fontSize:'13px',color:'var(--muted)',display:'flex',alignItems:'center',gap:'6px'}}>🔒 Secure Checkout</div>
       </nav>
 
@@ -176,7 +176,7 @@ export default function Checkout() {
 
       <footer style={{background:'#0F0408',padding:'24px 64px'}}>
         <div style={{display:'flex',justifyContent:'space-between',fontSize:'12px',color:'rgba(255,255,255,0.25)'}}>
-          <span>© 2026 Neila Beauty Store</span><span style={{color:'var(--gold)'}}>You are Beautiful ✦</span>
+          <span>© 2026 Beauty Store</span><span style={{color:'var(--gold)'}}>You are Beautiful ✦</span>
         </div>
       </footer>
 

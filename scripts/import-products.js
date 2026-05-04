@@ -9,7 +9,7 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_KEY
 )
 
-const BASE_URL = 'https://neilabeautystore.com'
+const BASE_URL = 'https://beautystore.com'
 
 const CAT_MAP = {
   'face-products': 'face-products',
@@ -55,7 +55,7 @@ function parseProducts(html) {
   const products = []
 
   // Extract each product entry using anchor tags to product pages
-  const entryPattern = /href="(https:\/\/neilabeautystore\.com\/product\/[^"]+)"[\s\S]{0,2000}?class="woocommerce-loop-product__title">([^<]+)<\/h2>[\s\S]{0,500}?<span class="woocommerce-Price-amount[\s\S]{0,100}?>([^<]+)<\/bdi>/g
+  const entryPattern = /href="(https:\/\/beautystore..com\/product\/[^"]+)"[\s\S]{0,2000}?class="woocommerce-loop-product__title">([^<]+)<\/h2>[\s\S]{0,500}?<span class="woocommerce-Price-amount[\s\S]{0,100}?>([^<]+)<\/bdi>/g
 
   let match
   while ((match = entryPattern.exec(html)) !== null) {
@@ -63,15 +63,15 @@ function parseProducts(html) {
     const name = decodeHtml(match[2])
     const priceStr = match[3].replace(/[^0-9.]/g, '')
     const price = parseFloat(priceStr) || 0
-    const slug = productUrl.replace('https://neilabeautystore.com/product/', '').replace(/\/$/, '')
+    const slug = productUrl.replace('https://beautystore.com/product/', '').replace(/\/$/, '')
 
     // Find image near this product URL
     const block = html.substring(Math.max(0, match.index - 1000), match.index + 500)
-    const imgMatch = block.match(/src="(https:\/\/neilabeautystore\.com\/wp-content\/uploads\/[^"]+\.(?:webp|jpg|jpeg|png))"/)
+    const imgMatch = block.match(/src="(https:\/\/beautystore..com\/wp-content\/uploads\/[^"]+\.(?:webp|jpg|jpeg|png))"/)
     const imageUrl = imgMatch ? imgMatch[1] : null
 
     // Find category near this product
-    const catMatch = block.match(/href="https:\/\/neilabeautystore\.com\/product-category\/([^"]+)\/"/)
+    const catMatch = block.match(/href="https:\/\/beautystore..com\/product-category\/([^"]+)\/"/)
     let categorySlug = ''
     if (catMatch) {
       const raw = catMatch[1].split('/').pop()
@@ -85,8 +85,8 @@ function parseProducts(html) {
   // Fallback: simpler pattern matching names + prices separately
   if (products.length === 0) {
     const names = [...html.matchAll(/class="woocommerce-loop-product__title">([^<]+)<\/h2>/g)]
-    const urls = [...html.matchAll(/href="https:\/\/neilabeautystore\.com\/product\/([^"\/]+)\/"/g)]
-    const imgs = [...html.matchAll(/src="(https:\/\/neilabeautystore\.com\/wp-content\/uploads\/[^"]+\.(?:webp|jpg|jpeg|png))"/g)]
+    const urls = [...html.matchAll(/href="https:\/\/beautystore..com\/product\/([^"\/]+)\/"/g)]
+    const imgs = [...html.matchAll(/src="(https:\/\/beautystore..com\/wp-content\/uploads\/[^"]+\.(?:webp|jpg|jpeg|png))"/g)]
     const prs = [...html.matchAll(/amount"[^>]*><bdi>[^0-9]*([\d.]+)<\/bdi>/g)]
 
     for (let i = 0; i < names.length; i++) {
@@ -104,7 +104,7 @@ function parseProducts(html) {
 }
 
 async function main() {
-  console.log('🌸 Neila Beauty — Product Importer v2')
+  console.log('🌸 Beauty Store — Product Importer v2')
   console.log('======================================\n')
 
   const { data: cats } = await supabase.from('categories').select('id, slug')

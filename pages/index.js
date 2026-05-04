@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -44,22 +44,22 @@ export default function Home() {
         setCombos(data.filter(p => p.categories?.slug === 'combo-sets').slice(0,6))
       }
     })
-    const cart = JSON.parse(localStorage.getItem('neila_cart')||'[]')
+    const cart = JSON.parse(localStorage.getItem('beauty_cart')||'[]')
     setCartCount(cart.reduce((s,i)=>s+i.qty,0))
   }, [])
 
   function addToCart(p) {
-    const cart = JSON.parse(localStorage.getItem('neila_cart')||'[]')
+    const cart = JSON.parse(localStorage.getItem('beauty_cart')||'[]')
     const ex = cart.find(i=>i.id===p.id)
     if(ex) ex.qty = Math.min(ex.qty+1,10)
     else cart.push({id:p.id,name:p.name,price:p.price,icon:catEmoji[p.categories?.slug]||'✨',qty:1})
-    localStorage.setItem('neila_cart', JSON.stringify(cart))
+    localStorage.setItem('beauty_cart', JSON.stringify(cart))
     setCartCount(cart.reduce((s,i)=>s+i.qty,0))
   }
 
   return (
     <>
-      <Head><title>Neila Beauty Store — You Are Beautiful</title></Head>
+      <Head><title>Beauty Store — You Are Beautiful</title></Head>
 
       {/* MARQUEE */}
       <div style={{background:'var(--rose)',padding:'10px 0',overflow:'hidden'}}>
@@ -77,7 +77,7 @@ export default function Home() {
       {/* NAV */}
       <nav style={{position:'sticky',top:0,zIndex:100,background:'rgba(250,248,245,0.95)',backdropFilter:'blur(16px)',WebkitBackdropFilter:'blur(16px)',borderBottom:'1px solid var(--border)',padding:'0 64px',display:'flex',alignItems:'center',justifyContent:'space-between',height:'74px'}}>
         <Link href="/" style={{fontFamily:'Cormorant Garamond, serif',fontSize:'27px',fontWeight:600,color:'var(--rose)',letterSpacing:'.5px'}}>
-          Neila <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em>
+          Beauty <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em>
         </Link>
         <ul style={{display:'flex',gap:'38px',listStyle:'none'}}>
           {[['Shop','/shop'],['New Arrivals','#arrivals'],['Combos','#combos'],['About','#about'],['Contact','#contact']].map(([label,href])=>(
@@ -147,7 +147,7 @@ export default function Home() {
             <div className="hero-inner">
               <div className="pulse-icon">✨</div>
               <div style={{fontFamily:'Cormorant Garamond, serif',fontSize:'22px',fontWeight:500,color:'var(--rose)',lineHeight:1.3}}>Glow from<br/>Within</div>
-              <div style={{fontSize:'11px',color:'var(--muted)',letterSpacing:'2px',textTransform:'uppercase',marginTop:'6px'}}>Neila Beauty Store</div>
+              <div style={{fontSize:'11px',color:'var(--muted)',letterSpacing:'2px',textTransform:'uppercase',marginTop:'6px'}}>Beauty Store</div>
             </div>
           </div>
         </div>
@@ -292,7 +292,7 @@ export default function Home() {
       {/* NEWSLETTER */}
       <section style={{background:'var(--dark)',padding:'84px 64px',textAlign:'center'}}>
         <span style={{display:'block',fontSize:'11px',letterSpacing:'4px',textTransform:'uppercase',color:'var(--gold)',fontWeight:500,marginBottom:'14px'}}>Stay in the Loop</span>
-        <h2 style={{fontFamily:'Cormorant Garamond, serif',fontSize:'clamp(36px,3.8vw,54px)',fontWeight:400,color:'#fff',marginBottom:'14px'}}>Join the <em style={{fontStyle:'italic',color:'var(--rose)'}}>Neila Family</em></h2>
+        <h2 style={{fontFamily:'Cormorant Garamond, serif',fontSize:'clamp(36px,3.8vw,54px)',fontWeight:400,color:'#fff',marginBottom:'14px'}}>Join the <em style={{fontStyle:'italic',color:'var(--rose)'}}>Beauty Family</em></h2>
         <p style={{fontSize:'15px',color:'rgba(255,255,255,0.45)',maxWidth:'500px',margin:'0 auto 0',lineHeight:1.72,fontWeight:300}}>Be first to know about new arrivals, exclusive deals and expert beauty tips.</p>
         <div style={{display:'flex',gap:'12px',maxWidth:'480px',margin:'32px auto 0'}}>
           <input type="email" placeholder="Enter your email address" style={{flex:1,padding:'16px 22px',borderRadius:'50px',border:'1px solid rgba(255,255,255,0.12)',background:'rgba(255,255,255,0.07)',color:'#fff',fontFamily:'DM Sans, sans-serif',fontSize:'14px',outline:'none'}}/>
@@ -305,7 +305,7 @@ export default function Home() {
         <div style={{display:'grid',gridTemplateColumns:'2fr 1fr 1fr 1fr',gap:'44px',marginBottom:'52px'}}>
           <div>
             <Link href="/" style={{fontFamily:'Cormorant Garamond, serif',fontSize:'24px',fontWeight:600,color:'var(--rose)',display:'block',marginBottom:'12px'}}>
-              Neila <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em>
+              Beauty <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em>
             </Link>
             <p style={{fontSize:'13px',color:'rgba(255,255,255,0.38)',lineHeight:1.72,fontWeight:300,maxWidth:'270px'}}>Your trusted destination for premium skincare and beauty products across South Africa. 100% authentic, always.</p>
           </div>
@@ -327,7 +327,7 @@ export default function Home() {
           ))}
         </div>
         <div style={{borderTop:'1px solid rgba(255,255,255,0.06)',paddingTop:'24px',display:'flex',justifyContent:'space-between',fontSize:'12px',color:'rgba(255,255,255,0.25)'}}>
-          <span>© 2026 Neila Beauty Store. All rights reserved.</span>
+          <span>© 2026 Beauty Store. All rights reserved.</span>
           <span style={{color:'var(--gold)'}}>You are Beautiful ✦</span>
         </div>
       </footer>

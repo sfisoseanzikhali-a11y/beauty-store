@@ -1,5 +1,5 @@
-document.documentElement.lang = 'en';
-document.title = 'Checkout \u2014 Neila Beauty Store';
+﻿document.documentElement.lang = 'en';
+document.title = 'Checkout \u2014 Beauty Store';
 
 const _preconnect = document.createElement('link');
 _preconnect.rel = 'preconnect';
@@ -101,7 +101,7 @@ document.body.innerHTML = `
 <div class="marquee-strip"><div class="marquee-track"><span>Free Delivery on Orders Over R500</span><span>100% Authentic Products</span><span>Secure Checkout</span><span>Fast Delivery Nationwide</span><span>Free Delivery on Orders Over R500</span><span>100% Authentic Products</span><span>Secure Checkout</span><span>Fast Delivery Nationwide</span></div></div>
 
 <nav>
-  <a href="/" class="logo">Neila <em>Beauty</em></a>
+  <a href="/" class="logo">Beauty <em>Beauty</em></a>
   <div class="secure-note">\ud83d\udd12 Secure Checkout</div>
 </nav>
 
@@ -169,7 +169,7 @@ document.body.innerHTML = `
   </aside>
 </div>
 
-<footer><div class="foot-bottom"><span>\u00a9 2026 Neila Beauty Store</span><span class="foot-gold">You are Beautiful \u2756</span></div></footer>
+<footer><div class="foot-bottom"><span>\u00a9 2026 Beauty Store</span><span class="foot-gold">You are Beautiful \u2756</span></div></footer>
 
 <div class="loading-overlay" id="loadingOverlay">
   <div class="spinner"></div>
@@ -231,7 +231,7 @@ async function submitOrder() {
     }).join('%0A');
     const sub = cart.reduce(function(s, i) { return s + i.price * i.qty; }, 0);
     const del = sub >= 500 ? 0 : 80;
-    const msg = "Hello Neila Beauty! I'd like to place an order:%0A%0AName: " + name
+    const msg = "Hello Beauty Store! I'd like to place an order:%0A%0AName: " + name
       + '%0AEmail: ' + email + '%0APhone: ' + phone + '%0AAddress: ' + address
       + '%0A%0AItems:%0A' + items + '%0A%0ATotal: R' + (sub + del).toFixed(2);
     window.open('https://wa.me/27722937265?text=' + msg, '_blank');

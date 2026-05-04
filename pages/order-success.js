@@ -1,4 +1,4 @@
-import Head from 'next/head'
+﻿import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -8,9 +8,9 @@ export default function OrderSuccess() {
 
   return (
     <>
-      <Head><title>Order Confirmed — Neila Beauty Store</title></Head>
+      <Head><title>Order Confirmed — Beauty Store</title></Head>
       <nav style={{background:'rgba(250,248,245,0.95)',borderBottom:'1px solid var(--border)',padding:'0 64px',display:'flex',alignItems:'center',height:'74px'}}>
-        <Link href="/" style={{fontFamily:'Cormorant Garamond, serif',fontSize:'27px',fontWeight:600,color:'var(--rose)'}}>Neila <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em></Link>
+        <Link href="/" style={{fontFamily:'Cormorant Garamond, serif',fontSize:'27px',fontWeight:600,color:'var(--rose)'}}>Beauty <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em></Link>
       </nav>
       <main style={{flex:1,display:'flex',alignItems:'center',justifyContent:'center',padding:'60px 20px',minHeight:'calc(100vh - 74px - 60px)'}}>
         <div style={{background:'#fff',borderRadius:'32px',border:'1px solid var(--border)',padding:'56px 48px',maxWidth:'560px',width:'100%',textAlign:'center',boxShadow:'0 20px 60px rgba(139,26,74,0.06)'}}>
@@ -42,7 +42,7 @@ export default function OrderSuccess() {
       </main>
       <footer style={{background:'#0F0408',padding:'20px 64px'}}>
         <div style={{display:'flex',justifyContent:'space-between',fontSize:'12px',color:'rgba(255,255,255,0.25)'}}>
-          <span>© 2026 Neila Beauty Store</span><span style={{color:'var(--gold)'}}>You are Beautiful ✦</span>
+          <span>© 2026 Beauty Store</span><span style={{color:'var(--gold)'}}>You are Beautiful ✦</span>
         </div>
       </footer>
       <style jsx global>{`

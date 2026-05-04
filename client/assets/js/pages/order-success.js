@@ -1,5 +1,5 @@
-document.documentElement.lang = 'en';
-document.title = 'Order Confirmed \u2014 Neila Beauty Store';
+﻿document.documentElement.lang = 'en';
+document.title = 'Order Confirmed \u2014 Beauty Store';
 
 const _preconnect = document.createElement('link');
 _preconnect.rel = 'preconnect';
@@ -46,7 +46,7 @@ footer{background:#0F0408;padding:20px 64px;}
 document.head.appendChild(_style);
 
 document.body.innerHTML = `
-<nav><a href="/" class="logo">Neila <em>Beauty</em></a></nav>
+<nav><a href="/" class="logo">Beauty <em>Beauty</em></a></nav>
 <main>
   <div class="success-card">
     <div class="success-icon">\u2713</div>
@@ -69,7 +69,7 @@ document.body.innerHTML = `
     </div>
   </div>
 </main>
-<footer><div class="foot-bottom"><span>\u00a9 2026 Neila Beauty Store</span><span class="foot-gold">You are Beautiful \u2756</span></div></footer>
+<footer><div class="foot-bottom"><span>\u00a9 2026 Beauty Store</span><span class="foot-gold">You are Beautiful \u2756</span></div></footer>
 `;
 
 const params = new URLSearchParams(location.search);

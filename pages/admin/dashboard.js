@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -18,7 +18,7 @@ export default function AdminDashboard() {
   const [editId, setEditId] = useState(null)
   const [form, setForm] = useState({name:'',slug:'',price:'',category_id:'',badge:'',stock:'100',description:''})
 
-  const token = typeof window!=='undefined' ? localStorage.getItem('neila_admin_token') : null
+  const token = typeof window!=='undefined' ? localStorage.getItem('beauty_admin_token') : null
 
   useEffect(() => {
     if(!token) { router.push('/admin/login'); return }
@@ -27,7 +27,7 @@ export default function AdminDashboard() {
 
   async function api(path, opts={}) {
     const res = await fetch('/api'+path, {...opts, headers:{'Content-Type':'application/json','Authorization':'Bearer '+token,...(opts.headers||{})}})
-    if(res.status===401) { localStorage.removeItem('neila_admin_token'); router.push('/admin/login') }
+    if(res.status===401) { localStorage.removeItem('beauty_admin_token'); router.push('/admin/login') }
     return res.json()
   }
 
@@ -89,13 +89,13 @@ export default function AdminDashboard() {
 
   return (
     <>
-      <Head><title>Admin — Neila Beauty</title></Head>
+      <Head><title>Admin — Beauty Store</title></Head>
       <div style={{display:'flex',minHeight:'100vh',fontFamily:'DM Sans, sans-serif'}}>
 
         {/* SIDEBAR */}
         <aside style={{width:'240px',background:'#1A0A0F',minHeight:'100vh',display:'flex',flexDirection:'column',flexShrink:0,position:'sticky',top:0,height:'100vh'}}>
           <div style={{padding:'28px 24px 20px',borderBottom:'1px solid rgba(255,255,255,0.07)'}}>
-            <div style={{fontFamily:'Cormorant Garamond, serif',fontSize:'22px',fontWeight:600,color:'var(--rose)'}}>Neila <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em></div>
+            <div style={{fontFamily:'Cormorant Garamond, serif',fontSize:'22px',fontWeight:600,color:'var(--rose)'}}>Beauty <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em></div>
             <div style={{fontSize:'10px',letterSpacing:'2px',textTransform:'uppercase',color:'rgba(255,255,255,0.3)',marginTop:'4px'}}>Admin Panel</div>
           </div>
           <nav style={{padding:'20px 0',flex:1}}>
@@ -109,7 +109,7 @@ export default function AdminDashboard() {
             </a>
           </nav>
           <div style={{padding:'20px 24px',borderTop:'1px solid rgba(255,255,255,0.07)'}}>
-            <button onClick={()=>{localStorage.removeItem('neila_admin_token');router.push('/admin/login')}} style={{width:'100%',background:'rgba(255,255,255,0.06)',color:'rgba(255,255,255,0.5)',border:'1px solid rgba(255,255,255,0.1)',padding:'11px',borderRadius:'10px',fontFamily:'DM Sans, sans-serif',fontSize:'13px',cursor:'pointer'}}>← Sign Out</button>
+            <button onClick={()=>{localStorage.removeItem('beauty_admin_token');router.push('/admin/login')}} style={{width:'100%',background:'rgba(255,255,255,0.06)',color:'rgba(255,255,255,0.5)',border:'1px solid rgba(255,255,255,0.1)',padding:'11px',borderRadius:'10px',fontFamily:'DM Sans, sans-serif',fontSize:'13px',cursor:'pointer'}}>← Sign Out</button>
           </div>
         </aside>
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -6,11 +6,11 @@ export default function Cart() {
   const [cart, setCart] = useState([])
 
   useEffect(() => {
-    setCart(JSON.parse(localStorage.getItem('neila_cart')||'[]'))
+    setCart(JSON.parse(localStorage.getItem('beauty_cart')||'[]'))
   }, [])
 
   function save(newCart) {
-    localStorage.setItem('neila_cart', JSON.stringify(newCart))
+    localStorage.setItem('beauty_cart', JSON.stringify(newCart))
     setCart([...newCart])
   }
 
@@ -28,7 +28,7 @@ export default function Cart() {
 
   return (
     <>
-      <Head><title>Cart — Neila Beauty Store</title></Head>
+      <Head><title>Cart — Beauty Store</title></Head>
 
       <div style={{background:'var(--rose)',padding:'10px 0',overflow:'hidden'}}>
         <div className="marquee-track">
@@ -39,7 +39,7 @@ export default function Cart() {
       </div>
 
       <nav style={{position:'sticky',top:0,zIndex:100,background:'rgba(250,248,245,0.95)',backdropFilter:'blur(16px)',borderBottom:'1px solid var(--border)',padding:'0 64px',display:'flex',alignItems:'center',justifyContent:'space-between',height:'74px'}}>
-        <Link href="/" style={{fontFamily:'Cormorant Garamond, serif',fontSize:'27px',fontWeight:600,color:'var(--rose)'}}>Neila <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em></Link>
+        <Link href="/" style={{fontFamily:'Cormorant Garamond, serif',fontSize:'27px',fontWeight:600,color:'var(--rose)'}}>Beauty <em style={{fontStyle:'italic',color:'var(--gold)'}}>Beauty</em></Link>
         <ul style={{display:'flex',gap:'38px',listStyle:'none'}}>
           {[['Home','/'],['Shop','/shop']].map(([l,h])=>(<li key={l}><Link href={h} className="nav-link">{l}</Link></li>))}
         </ul>
@@ -122,7 +122,7 @@ export default function Cart() {
 
       <footer style={{background:'#0F0408',padding:'24px 64px'}}>
         <div style={{display:'flex',justifyContent:'space-between',fontSize:'12px',color:'rgba(255,255,255,0.25)'}}>
-          <span>© 2026 Neila Beauty Store. All rights reserved.</span>
+          <span>© 2026 Beauty Store. All rights reserved.</span>
           <span style={{color:'var(--gold)'}}>You are Beautiful ✦</span>
         </div>
       </footer>
