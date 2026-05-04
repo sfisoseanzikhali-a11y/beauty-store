@@ -1,0 +1,24 @@
+:root {
+  --rose: #8B1A4A;
+  --rose-hover: #6D1438;
+  --rose-light: #B84B7A;
+  --rose-pale: #F5E6EE;
+  --gold: #C9A96E;
+  --gold-light: #E8D5A8;
+  --ivory: #FAF8F5;
+  --dark: #1A0A0F;
+  --text: #2C1520;
+  --muted: #7A6670;
+  --border: rgba(139,26,74,0.1);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--ivory);
+  color: var(--text);
+  overflow-x: hidden;
+}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: var(--rose-light); border-radius: 3px; }
+a { text-decoration: none; color: inherit; }
