@@ -1,4 +1,4 @@
-﻿document.documentElement.lang = 'en';
+document.documentElement.lang = 'en';
 document.title = 'Cart \u2014 Beauty Store';
 
 const _preconnect = document.createElement('link');

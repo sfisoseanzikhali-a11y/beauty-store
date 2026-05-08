@@ -1,4 +1,4 @@
-﻿document.documentElement.lang = 'en';
+document.documentElement.lang = 'en';
 document.title = 'Beauty Store \u2014 You Are Beautiful';
 
 const _preconnect = document.createElement('link');

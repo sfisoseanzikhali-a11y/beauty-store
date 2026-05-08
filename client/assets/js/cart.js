@@ -1,4 +1,4 @@
-﻿const CART_KEY = 'beauty_cart';
+const CART_KEY = 'beauty_cart';
 
 function getCart() { return JSON.parse(localStorage.getItem(CART_KEY) || '[]'); }
 function saveCart(c) { localStorage.setItem(CART_KEY, JSON.stringify(c)); updateCartCount(); }
