@@ -1,4 +1,4 @@
-import supabase from '../../../lib/supabase'
+import supabase from '../../../../lib/supabase'
 import crypto from 'crypto'
 
 export const config = { api: { bodyParser: true } }
